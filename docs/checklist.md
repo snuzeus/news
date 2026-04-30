@@ -9,9 +9,9 @@
   - [x] 컬러 토큰 설정 (`card`, `page`, `soft`, `ink`, `sub`, `mute`, `line`, `accent`, `accent-deep`)
   - [x] 타이포그래피 폰트 적용 (Pretendard, IBM Plex Mono, Noto Serif KR)
   - [x] 8px 단위 여백(Spacing) 규칙 및 공통 유틸리티 적용
-- [ ] **공통 레이아웃 및 기본 상태 구조 설계**
-  - [ ] 최상단 `<Newsstand>` 레이아웃 컴포넌트 구성
-  - [ ] 주요 상태(`tab`, `page`, `opened`, `subscribed` 등) 관리 구조 세팅
+- [x] **공통 레이아웃 및 기본 상태 구조 설계**
+  - [x] 최상단 `<Newsstand>` 레이아웃 컴포넌트 구성
+  - [x] 주요 상태(`tab`, `page`, `opened`, `subscribed` 등) 관리 구조 세팅
 - [ ] **상단 영역 (Header & Ticker) 구현**
   - [ ] `<Header>`: 로고 및 오늘 날짜(`YYYY. MM. DD. 요일`) 렌더링
   - [ ] `<Ticker>`: 2줄 자동 롤링 뉴스 티커 구현 (3.2초 주기 교차 페이드아웃 애니메이션 적용)
