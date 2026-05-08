@@ -16,7 +16,9 @@ export default function Newsstand() {
 
       {/* 핵심 뷰 영역 (Grid or List) */}
       <main className="relative min-h-[384px] border border-line bg-card mt-6">
-        {viewMode === 'grid' ? <PressGrid /> : <PressView />}
+        <div key={viewMode} className="w-full h-full animate-fade-in">
+          {viewMode === 'grid' ? <PressGrid /> : <PressView />}
+        </div>
       </main>
     </div>
   );

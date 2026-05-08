@@ -52,7 +52,7 @@ export default function PressGrid() {
       <Chevron direction="left" onClick={handlePrev} disabled={page <= 1} />
       
       {/* 6x4 그리드 레이아웃. 셀 단위 경계선을 통해 전체 테두리 효과까지 완성 */}
-      <div className="grid grid-cols-6 grid-rows-4 w-full h-[384px]">
+      <div key={page} className="grid grid-cols-6 grid-rows-4 w-full h-[384px] animate-fade-in">
         {Array.from({ length: ITEMS_PER_PAGE }).map((_, idx) => {
           const item = currentItems[idx];
           const isLastCol = idx % 6 === 5;

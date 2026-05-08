@@ -14,7 +14,7 @@ export interface PressDetail extends Press {
   articles: string[];
 }
 
-export const CATEGORIES = ['종합/경제', '방송/통신', 'IT', '영자지', '스포츠/연예', '매거진/전문지', '지역'];
+export const CATEGORIES = ['종합/경제', '방송/통신', 'IT', '스포츠/연예', '매거진/전문지', '지역'];
 
 // 96 Press items (Grid view supports 4 pages of 24)
 export const MOCK_PRESS_LIST: Press[] = Array.from({ length: 96 }).map((_, i) => ({

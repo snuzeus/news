@@ -160,7 +160,7 @@ export default function PressView() {
             </div>
             {isActive && catPresses.length > 0 && (
               <div 
-                className="absolute left-0 top-0 h-full bg-accent-deep transition-none"
+                className="absolute left-0 top-0 h-full bg-accent-deep transition-all duration-75 ease-linear"
                 style={{ width: `${progress}%` }}
               />
             )}
@@ -174,7 +174,7 @@ export default function PressView() {
     return (
       <div className="relative w-full h-[384px] flex flex-col bg-card">
         {renderCategoryTabs()}
-        <div className="flex-1 flex items-center justify-center text-sub">
+        <div className="flex-1 flex items-center justify-center text-sub animate-fade-in">
           {tab === 'sub' ? '구독한 언론사가 없습니다.' : '언론사가 없습니다.'}
         </div>
       </div>
@@ -187,7 +187,7 @@ export default function PressView() {
         <Chevron direction="left" onClick={handlePrev} disabled={activeList.length <= 1} />
         <Chevron direction="right" onClick={handleNext} disabled={activeList.length <= 1} />
         {renderCategoryTabs()}
-        <div className="flex-1 flex items-center justify-center text-sub">
+        <div className="flex-1 flex items-center justify-center text-sub animate-fade-in">
           {isDetailLoading ? '데이터를 불러오는 중입니다...' : '이 카테고리에는 언론사가 없습니다.'}
         </div>
       </div>
@@ -202,7 +202,7 @@ export default function PressView() {
       {renderCategoryTabs()}
 
       {/* 하단 기사 렌더링 영역 */}
-      <div className="flex flex-1 p-6 gap-8">
+      <div key={currentPressId} className="flex flex-1 p-6 gap-8 animate-fade-in">
         {/* 좌측 메인 헤드라인 */}
         <div className="flex-1 flex flex-col gap-4">
           <div className="flex items-center gap-4">
