@@ -43,7 +43,7 @@ export default function PressCell({ press }: PressCellProps) {
       <div className="hidden group-hover:flex items-center justify-center w-full h-full absolute inset-0 bg-soft">
         <button
           onClick={handleSubscribe}
-          className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-card border border-line shadow-sm text-xs text-sub font-medium hover:bg-card/80 transition-colors"
+          className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-card border border-line shadow-sm text-xs text-sub font-medium hover:bg-card/80 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
           {isSubscribed ? (
             <>

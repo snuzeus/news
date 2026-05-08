@@ -12,7 +12,7 @@ export default function Chevron({ direction, onClick, disabled = false }: Chevro
   return (
     <button
       onClick={onClick}
-      className={`absolute top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-card border border-line shadow-sm hover:bg-soft transition-colors z-10 ${
+      className={`absolute top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-card border border-line shadow-sm hover:bg-soft transition-colors z-10 outline-none focus-visible:ring-2 focus-visible:ring-accent ${
         direction === 'left' ? '-left-[60px]' : '-right-[60px]'
       }`}
       aria-label={`${direction === 'left' ? 'Previous' : 'Next'} page`}

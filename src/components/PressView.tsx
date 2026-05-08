@@ -138,7 +138,7 @@ export default function PressView() {
         const isActive = activeCatIndex === idx;
         const catPresses = groupedList[idx].presses;
         return (
-          <div
+          <button
             key={cat}
             onClick={() => {
               setActiveCatIndex(idx);
@@ -148,7 +148,7 @@ export default function PressView() {
             }}
             className={`relative flex-1 flex items-center justify-center text-sm cursor-pointer overflow-hidden
               ${isActive ? 'font-bold text-card bg-accent' : 'text-sub hover:bg-line/20'}
-              border-r border-line last:border-r-0
+              border-r border-line last:border-r-0 outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-accent-deep
               ${catPresses.length === 0 ? 'opacity-50' : ''}
             `}
           >
@@ -164,7 +164,7 @@ export default function PressView() {
                 style={{ width: `${progress}%` }}
               />
             )}
-          </div>
+          </button>
         );
       })}
     </div>
@@ -210,7 +210,7 @@ export default function PressView() {
             <span className="text-xs text-mute">{detailData.date}</span>
             <button 
               onClick={handleSubscribe}
-              className="px-3 py-1.5 text-xs border border-line rounded-full text-sub hover:bg-soft transition-colors flex items-center gap-1"
+              className="px-3 py-1.5 text-xs border border-line rounded-full text-sub hover:bg-soft transition-colors flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               {isSubscribed ? (
                 <>
